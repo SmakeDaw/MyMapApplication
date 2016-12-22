@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="2dp"
+        android:weightSum="1">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="2dp" >
+
+            <TextView
+                android:text="Lat :"
+                android:layout_width="wrap_content"
+                android:id="@+id/textView"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="Long :"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:text="Radius :"
+                android:layout_width="wrap_content"
+                android:id="@+id/textView3"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:padding="2dp" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="textPersonName"
+                android:text="18.7717874"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:textSize="10sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="textPersonName"
+                android:text="98.9742796"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:textSize="10sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="textPersonName"
+                android:text="500"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp" >
+
+            <Button
+                android:text="Search"
+                android:layout_width="match_parent"
+                android:id="@+id/button3"
+                android:textSize="14sp"
+                android:layout_height="33dp" />
+
+            <Switch
+                android:text="Change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch1" />
+
+            <Button
+                android:text="A-Z"
+                android:layout_width="match_parent"
+                android:id="@+id/button2"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_height="match_parent"
+            tools:context="com.wdwd.insomnia.mapproject.MapsActivity"
+            android:layout_width="match_parent" />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</LinearLayout>
